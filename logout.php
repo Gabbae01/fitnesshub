@@ -1,6 +1,6 @@
 <?php
 session_start();
-session_destroy(); // Clear the session
-header('Location: landingpage.php'); // Redirect to homepage
+session_destroy();
+header('Location: landingpage.php'); 
 exit;
 ?>

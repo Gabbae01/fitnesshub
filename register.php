@@ -1,18 +1,16 @@
 <?php
-include "connect.php"; // Ensure this connects to your DB
+include "connect.php";
 
 if (isset($_POST['register'])) {
     $username = trim($_POST['username']);
     $password = $_POST['password'];
     $role = $_POST['role'];
 
-    // Basic validation
     if (empty($username) || empty($password) || empty($role)) {
         $error = "All fields are required.";
-    } elseif (strlen($password) < 6) { // Example: minimum password length
+    } elseif (strlen($password) < 6) { 
         $error = "Password must be at least 6 characters.";
     } else {
-        // Check if username already exists
         $stmt = $conn->prepare("SELECT id FROM tbl_users WHERE username = ?");
         $stmt->bind_param("s", $username);
         $stmt->execute();
@@ -20,10 +18,8 @@ if (isset($_POST['register'])) {
         if ($result->num_rows > 0) {
             $error = "Username already exists.";
         } else {
-            // Hash the password
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-            // Insert new user
             $stmt = $conn->prepare("INSERT INTO tbl_users (username, password, role) VALUES (?, ?, ?)");
             $stmt->bind_param("sss", $username, $hashed_password, $role);
             if ($stmt->execute()) {
@@ -42,7 +38,7 @@ if (isset($_POST['register'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register - Gym Fitness Hub</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to your shared CSS file -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="register-container">

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard - Gym Fitness Hub</title>
-    <link rel="stylesheet" href="style.css">  <!-- Links to your existing styles.css -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="admin-header">
@@ -74,7 +74,6 @@
                             <td>Inactive</td>
                             <td><button class="btn-small">Edit</button> <button class="btn-small">Delete</button></td>
                         </tr>
-                        <!-- Add more rows as needed -->
                     </tbody>
                 </table>
             </section>
@@ -104,7 +103,6 @@
     </div>
 
     <script>
-        // Smooth scroll for sidebar links
         document.querySelectorAll('.sidebar a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();

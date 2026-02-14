@@ -1,18 +1,15 @@
 <?php
-session_start(); // Start session to check login status
-include "connect.php"; // Include your DB connection
+session_start();
+include "connect.php"; 
 
-// Check if user is logged in and is an admin
 $is_admin = false;
 if (isset($_SESSION['user_id'])) {
-    // Query the database to get the user's role
-    // Assumes 'tbl_users' table with 'id' and 'role' columns (adjust if needed)
     $stmt = $conn->prepare("SELECT role FROM tbl_users WHERE id = ?");
     $stmt->bind_param("i", $_SESSION['user_id']);
     $stmt->execute();
     $result = $stmt->get_result();
     $user = $result->fetch_assoc();
-    if ($user && $user['role'] === 'admin') { // Adjust 'admin' if your role value differs
+    if ($user && $user['role'] === 'admin') {
         $is_admin = true;
     }
     $stmt->close();
@@ -36,9 +33,9 @@ if (isset($_SESSION['user_id'])) {
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
           <?php if (isset($_SESSION['user_id'])): ?>
-            <li><a href="logout.php">Logout</a></li>  <!-- Add logout link if logged in -->
+            <li><a href="logout.php">Logout</a></li>
             <?php if ($is_admin): ?>
-              <li><a href="admin_dashboard.php">Admin Dashboard</a></li>  <!-- Only show for admins -->
+              <li><a href="admin_dashboard.php">Admin Dashboard</a></li>
             <?php endif; ?>
           <?php else: ?>
             <li><a href="login.php">Login</a></li>
@@ -57,7 +54,6 @@ if (isset($_SESSION['user_id'])) {
         <a href="#services" class="btn">Get Started</a>
       </div>
       <div class="hero-image">
-        <!-- Placeholder for an image, e.g., <img src="images/hero.jpg" alt="Fitness Hero"> -->
       </div>
     </section>
 
@@ -93,7 +89,6 @@ if (isset($_SESSION['user_id'])) {
     </footer>
 
     <script>
-      // Smooth scroll for nav links
       document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener("click", function (e) {
           e.preventDefault();
