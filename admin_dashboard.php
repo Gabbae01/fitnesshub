@@ -9,7 +9,11 @@
 <body>
     <header class="admin-header">
         <nav>
-            <div class="logo">Gym Fitness Hub - Admin</div>
+            <div class="logo">
+                <a href="landingpage.php">
+                <img src="img/logo.jpg" alt="Gym Fitness Hub Logo"></a>
+                <span>Gym Fitness Hub - Member</span>
+            </div>
             <ul>
                 <li><a href="landingpage.php">Back to Site</a></li>
                 <li><a href="login.php">Logout</a></li>
