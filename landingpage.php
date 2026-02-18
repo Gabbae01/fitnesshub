@@ -21,8 +21,9 @@ if (isset($_SESSION['user_id'])) {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gym Fitness Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/landing.css" />
   </head>
   <body>
     <header>
@@ -48,18 +49,29 @@ if (isset($_SESSION['user_id'])) {
       </nav>
     </header>
 
-    <section id="home" class="hero">
-      <div class="hero-content">
-        <h1>Transform Your Body, Elevate Your Life</h1>
-        <p>
-          Join the ultimate fitness community. Workouts, nutrition, and
-          motivation all in one place.
-        </p>
-        <a href="#services" class="btn">Get Started</a>
-      </div>
-      <div class="hero-image">
-      </div>
-    </section>
+<section id="home" class="hero">
+
+  <div class="hero-content">
+
+    <div class="hero-text">
+      <h1>Transform Your Body, Elevate Your Life</h1>
+
+      <p>
+        Join the ultimate fitness community. Workouts,
+        nutrition, and motivation all in one place.
+      </p>
+
+      <a href="#services" class="btn">Get Started</a>
+    </div>
+
+    <div class="hero-image">
+      <img src="img/img1.jpg" alt="Gym Fitness Hub">
+    </div>
+
+  </div>
+
+</section>
+
 
     <section id="about" class="about">
       <h2>About Us</h2>

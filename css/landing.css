@@ -1,0 +1,257 @@
+/* =========================
+   GLOBAL
+========================= */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f0f4f1;
+  color: #222;
+  line-height: 1.6;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+  background: rgba(46,125,50,0.95);
+  backdrop-filter: blur(10px);
+  padding: 15px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: white;
+}
+
+.logo img {
+  height: 45px;
+  width: auto;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #a5d6a7;
+}
+
+nav a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: #a5d6a7;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+/* HERO SECTION */
+
+.hero {
+  background: linear-gradient(135deg,#4caf50,#1b5e20);
+  color: white;
+
+  padding-top: 140px;
+  padding-bottom: 100px;
+
+  min-height: 80vh;
+
+  display: flex;
+  align-items: center;
+}
+
+
+/* THIS FIXES THE WIDTH */
+.hero-content {
+  max-width: 1200px;
+  margin: auto;
+
+  padding: 0 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 40px;
+}
+
+
+/* TEXT SIDE */
+.hero-text {
+  flex: 1;
+}
+
+
+/* IMAGE SIDE */
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+
+.hero-image img {
+  max-width: 450px;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn {
+  background: linear-gradient(45deg,#4caf50,#2e7d32);
+  color: white;
+  padding: 12px 28px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(76,175,80,0.4);
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(76,175,80,0.6);
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 40px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.about h2 {
+  color: #2e7d32;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.services h2 {
+  color: #2e7d32;
+  margin-bottom: 40px;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  margin-top: 50px;
+  background: #2e7d32;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px)
+{
+
+.hero {
+  flex-direction: column;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2rem;
+}
+
+nav ul {
+  flex-direction: column;
+}
+
+}
