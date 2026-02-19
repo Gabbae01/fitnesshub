@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard - Gym Fitness Hub</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header class="admin-header">
         <nav>
             <div class="logo">
                 <a href="landingpage.php">
-                <img src="img/logo.jpg" alt="Gym Fitness Hub Logo"></a>
+                    <img src="img/logo.jpg" alt="Gym Fitness Hub Logo"></a>
                 <span>Gym Fitness Hub - Member</span>
             </div>
             <ul>
@@ -108,7 +110,7 @@
 
     <script>
         document.querySelectorAll('.sidebar a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+            anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
@@ -117,4 +119,5 @@
         });
     </script>
 </body>
+
 </html>

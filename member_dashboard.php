@@ -20,18 +20,20 @@ $stmt->close();
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Member Dashboard - Gym Fitness Hub</title>
     <link rel="stylesheet" href="style.css"> <!-- Links to your shared styles.css -->
 </head>
+
 <body>
     <header class="member-header">
         <nav>
             <div class="logo">
                 <a href="landingpage.php">
-                <img src="img/logo.jpg" alt="Gym Fitness Hub Logo"></a>
+                    <img src="img/logo.jpg" alt="Gym Fitness Hub Logo"></a>
                 <span>Gym Fitness Hub - Member</span>
             </div>
             <ul>
@@ -131,17 +133,17 @@ $stmt->close();
                 <form class="profile-form">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" value="John Doe" required>
-                    
+
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" value="john@example.com" required>
-                    
+
                     <label for="goal">Fitness Goal:</label>
                     <select id="goal" name="goal">
                         <option value="weight-loss">Weight Loss</option>
                         <option value="muscle-gain">Muscle Gain</option>
                         <option value="endurance">Endurance</option>
                     </select>
-                    
+
                     <button type="submit" class="btn">Save Changes</button>
                 </form>
             </section>
@@ -151,7 +153,7 @@ $stmt->close();
     <script>
         // Smooth scroll for sidebar links
         document.querySelectorAll('.sidebar a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+            anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
@@ -160,4 +162,5 @@ $stmt->close();
         });
     </script>
 </body>
+
 </html>
