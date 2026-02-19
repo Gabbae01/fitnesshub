@@ -16,5 +16,6 @@
     body {
         color: blue;
         background-color: red;
+        font-size: 1000px;
     }
 </style>
